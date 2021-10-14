@@ -20,7 +20,7 @@
 		<!-- CAPA CONTENEDORA CABEZOTE WEB -->
 <header id="header">
 	<jsp:include page="encabezado.jsp" />
-	Bienvenido ${sessionScope.usuario.nombre}
+	Welcome! ${sessionScope.usuario.nombre_usuario}
 </header>
 		
 		<!-- CAPA CONTENEDORA MENU DE NAVEGACION WEB -->

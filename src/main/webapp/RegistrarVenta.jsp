@@ -19,7 +19,7 @@
 <div id="main-content">
 <header id="header">
 	<jsp:include page="encabezado.jsp" />
-	Bienvenido ${sessionScope.usuario.nombre}
+	Hola! ${sessionScope.usuario.nombre_usuario}
 </header>
 <!-- CAPA CONTENEDORA MENU DE NAVEGACION WEB -->
 		<nav id="nav">

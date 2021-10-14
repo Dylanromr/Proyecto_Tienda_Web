@@ -15,7 +15,7 @@
 <div class = "login">
 
 <br><br><br><br>
-<h1><center>Login</h1>
+<h3><center>Login Tienda</h3>
 
 <form action="usuario" method="post">
 <input type="hidden" name="tipo" value="iniciarSesion" />

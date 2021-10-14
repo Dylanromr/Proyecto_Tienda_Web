@@ -15,7 +15,7 @@ public class ModeloLogin
 		
 		try {
 			cn = Conexion.getConexion();
-			String sql = "SELECT cedula_usuario, nombre_usuario, password FROM usuarios U WHERE nombre_usuario = ? AND password = ?";
+			String sql = "SELECT cedula_usuario, nombre_usuario, password FROM usuarios WHERE nombre_usuario = ? AND password = ?";
 			pstm = cn.prepareStatement(sql);
 			pstm.setString(1, nombre);
 			pstm.setString(2, clave);
@@ -23,9 +23,9 @@ public class ModeloLogin
 			
 			while (rs.next()) {
 				login = new Login();
-				login.setIdUsuario(rs.getInt("cedula_usuario"));
-				login.setNombre(rs.getString("nombre"));
-				login.setClave(rs.getString("clave"));
+				login.setCedula_usuario(rs.getInt("cedula_usuario"));
+				login.setNombre_usuario(rs.getString("nombre_usuario"));
+				login.setPassword(rs.getString("password"));
 			}
 			
 		} catch (Exception e) {

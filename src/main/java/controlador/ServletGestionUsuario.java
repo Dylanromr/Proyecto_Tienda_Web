@@ -106,39 +106,36 @@ import modelo.UsuarioDAO;
 		 usdao=new UsuarioDAO();
 		 recdatos=usdao.consultarusuario(usdto);
 		 doc=recdatos.getDocumento();
-		 u=recdatos.getNomusuario();
-		 c=recdatos.getClave();
 		 r=recdatos.getRol();
 		 e=recdatos.getEstado();
-				 
+		 c=recdatos.getClave();
+		 u=recdatos.getNomusuario();
+
 		 response.sendRedirect("Usuarios.jsp?doc="+doc+"&&us="+u+"&&cl="+c+"&&ro="+r+"&&es="+e);
 			
 		}	
 		if(request.getParameter("btnact")!=null) {
 			//Acci�n para actualizar un usuraio
-		  boolean dat;
-		  d=Integer.parseInt(request.getParameter("doc"));
-		  u=request.getParameter("usu");
-		  c=request.getParameter("cla");
-		  r=request.getParameter("rol");
-		  e=request.getParameter("est");
-		  JOptionPane.showMessageDialog(null, "DOCUMENTO"+d);
-		  usdto=new UsuarioDTO(d, u, c, r, e);
-		  usdao=new UsuarioDAO();
-		  dat=usdao.actualizar(usdto);
+			boolean dat;
+			d=Integer.parseInt(request.getParameter("doc"));
+			u=request.getParameter("usu");
+			c=request.getParameter("cla");
+			r=request.getParameter("rol");
+			e=request.getParameter("est");
+			
+			usdto=new UsuarioDTO(d, u, c, r, e);
+			usdao=new UsuarioDAO();
+			dat=usdao.actualizar(usdto);
 			if(dat==true) {
-				JOptionPane.showMessageDialog(null, "El usuario se actualizo");
+				JOptionPane.showMessageDialog(null, "Usuario actualizado");
 				response.sendRedirect("Usuarios.jsp");
 			}
-		  
 			else {
-				JOptionPane.showMessageDialog(null, "El usuario no se actualizo");
-			     response.sendRedirect("Usuarios.jsp");
-			
+				JOptionPane.showMessageDialog(null, "Usuario No actualizado");
+				response.sendRedirect("Usuarios.jsp");
 			}
-			
-			
-		}
+					
+			}
 		
 		if(request.getParameter("btneli")!=null) {
 			//Acci�n para eliminar

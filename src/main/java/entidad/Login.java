@@ -2,32 +2,32 @@ package entidad;
 
 public class Login 
 {
-	private int idUsuario;
+	private int cedula_usuario;
 	private String nombre;
-	private String clave;
+	private String password;
 
-	public int getIdUsuario() {
-		return idUsuario;
+	public int getCedula_usuario() {
+		return cedula_usuario;
 	}
 
-	public void setIdUsuario(int idUsuario) {
-		this.idUsuario = idUsuario;
+	public void setCedula_usuario(int cedula_usuario) {
+		this.cedula_usuario = cedula_usuario;
 	}
 
-	public String getNombre() {
+	public String getNombre_usuario() {
 		return nombre;
 	}
 
-	public void setNombre(String nombre) {
+	public void setNombre_usuario(String nombre) {
 		this.nombre = nombre;
 	}
 
-	public String getClave() {
-		return clave;
+	public String getPassword() {
+		return password;
 	}
 
-	public void setClave(String clave) {
-		this.clave = clave;
+	public void setPassword(String password) {
+		this.password = password;
 	}
 
 }
